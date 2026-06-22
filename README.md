@@ -1,36 +1,202 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 AI Recruitment Platform
 
-## Getting Started
+An AI-powered recruitment platform that streamlines the hiring process through Resume Analysis, ATS Scoring, AI-Generated Interviews, Face-to-Face Assessments, and Intelligent Hiring Reports.
 
-First, run the development server:
+## 📌 Overview
+
+AI Recruitment Platform helps candidates and recruiters by automating resume screening, interview preparation, candidate evaluation, and hiring recommendations using Generative AI.
+
+The platform combines modern web technologies with AI to create an end-to-end recruitment workflow.
+
+---
+
+## ✨ Features
+
+### 📄 Resume Parser
+
+* Upload PDF resumes
+* Extract skills, education, experience, and projects
+* Generate structured candidate profiles
+
+### 🎯 ATS Resume Checker
+
+* Compare resumes against job descriptions
+* ATS compatibility scoring
+* Missing keyword detection
+* Resume improvement suggestions
+
+### 🤖 AI Interview Question Generator
+
+* Technical interview questions
+* Behavioral interview questions
+* Project-based interview questions
+* Experience-based customization
+
+### 🎥 Face-to-Face AI Interview
+
+* Webcam integration
+* Voice response capture
+* AI-powered interview simulation
+* Real-time candidate assessment
+
+### 📊 Intelligent Candidate Evaluation
+
+* Technical Score
+* Communication Score
+* Confidence Score
+* Hiring Recommendation
+
+### 👨‍💼 Recruiter Dashboard
+
+* Candidate management
+* Resume tracking
+* Interview reports
+* AI-generated hiring insights
+
+---
+
+## 🏗️ System Architecture
+
+Candidate → Resume Upload → ATS Analysis → AI Question Generation → AI Interview → Evaluation Engine → Hiring Report
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 15
+* React
+* Tailwind CSS
+* Shadcn UI
+
+### Backend
+
+* Next.js API Routes
+* Server Actions
+
+### Database
+
+* PostgreSQL
+* Drizzle ORM
+* Neon Database
+
+### Authentication
+
+* Clerk Authentication
+
+### Artificial Intelligence
+
+* Google Gemini API
+* Prompt Engineering
+* AI Evaluation Engine
+
+### Storage
+
+* UploadThing
+* Cloud Storage
+
+---
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+app/
+├── dashboard/
+│   ├── resume/
+│   ├── ats-checker/
+│   ├── interview/
+│   ├── reports/
+│   └── recruiter/
+│
+├── api/
+│   ├── resume/
+│   ├── ats/
+│   ├── interview/
+│   └── reports/
+│
+components/
+db/
+lib/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Future Enhancements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Multi-Agent AI Architecture
+* Real-Time Coding Interviews
+* AI Resume Builder
+* Job Matching Engine
+* HR Analytics Dashboard
+* Candidate Ranking System
+* Interview Video Analysis
+* Emotion Detection
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Use Cases
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Candidates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Resume Optimization
+* Interview Preparation
+* Skill Assessment
+* AI Feedback
 
-## Deploy on Vercel
+### Recruiters
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Candidate Screening
+* Automated Evaluation
+* Hiring Recommendations
+* Recruitment Analytics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📈 Development Roadmap
+
+### Phase 1
+
+* Authentication
+* Resume Upload
+* Resume Parsing
+
+### Phase 2
+
+* ATS Analysis
+* Question Generation
+
+### Phase 3
+
+* Face-to-Face AI Interview
+
+### Phase 4
+
+* Recruiter Dashboard
+* Hiring Reports
+
+### Phase 5
+
+* Multi-Agent AI System
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+**Rawlo Dudhisty**
+
+Full Stack Developer | AI Developer
+
+Building AI-powered applications that solve real-world problems.
