@@ -8,9 +8,39 @@ datasource db {
 }
 
 model Resume {
-  id        String   @id @default(cuid())
-  fileName  String
-  content   String
-  atsScore  Int?
-  createdAt DateTime @default(now())
+  id          String   @id @default(cuid())
+  fileName    String
+  content     String
+
+  atsScore    Int?
+
+  summary     String?
+
+  strengths   Json?
+
+  weaknesses  Json?
+
+  keywords    Json?
+
+  createdAt   DateTime @default(now())
+}
+
+model Interview {
+  id          String            @id @default(cuid())
+  jobRole     String
+  experience  String
+  techStack   String
+  description String
+  questions   Json
+  createdAt   DateTime          @default(now())
+  answers     InterviewAnswer[]
+}
+
+model InterviewAnswer {
+  id          String    @id @default(cuid())
+  interviewId String
+  question    String
+  answer      String
+  createdAt   DateTime  @default(now())
+  interview   Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
 }

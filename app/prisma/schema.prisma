@@ -8,23 +8,64 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model User {
-  id        String   @id @default(cuid())
-  clerkId   String   @unique
-  email     String
-  createdAt DateTime @default(now())
+model Resume {
+  id           String   @id @default(cuid())
+  clerkUserId  String
 
-  resumes   Resume[]
+  fileName     String
+  content      String
+
+  atsScore     Int?
+
+  summary      String?
+
+  strengths    Json?
+
+  weaknesses   Json?
+
+  keywords     Json?
+
+  createdAt    DateTime @default(now())
 }
 
-model Resume {
-  id        String   @id @default(cuid())
-  userId    String
-  fileName  String
-  content   String
-  atsScore  Int?
+model Interview {
+  id           String   @id @default(cuid())
+  clerkUserId  String
+  jobRole      String
+  experience   String
+  techStack    String
+  description  String
+  questions    Json
+  createdAt    DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
+  answers      InterviewAnswer[]
+  evaluation   InterviewEvaluation?
+}
 
-  createdAt DateTime @default(now())
+model InterviewAnswer {
+  id           String   @id @default(cuid())
+  interviewId  String
+  question     String
+  answer       String
+  createdAt    DateTime @default(now())
+
+  interview Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+}
+
+model InterviewEvaluation {
+  id                 String   @id @default(cuid())
+  interviewId        String   @unique
+
+  overallScore       Int
+  technicalScore     Int
+  communicationScore Int
+  confidenceScore    Int
+
+  strengths          Json
+  improvements       Json
+  feedback           String
+
+  createdAt          DateTime @default(now())
+
+  interview Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
 }
